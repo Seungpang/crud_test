@@ -1,0 +1,17 @@
+<h1>게시글 수정</h1>
+<form action="/home/update/<%= @post.id %>" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+       <div class="form-group">
+        <label for="subject">제목</label>
+        <input type="string" class="form-control" name="post_title" value=<%= @post.title %>>
+      </div>
+      <div class="form-group">
+        <label for="writer">작성자</label>
+        <input type="text" class="form-control"  name="post_name" value=<%= @post.name %> >
+      </div>
+      <div class="form-group">
+        <label for="writer">비밀번호</label>
+        <input type="text" class="form-control"  name="post_password" value=<%= @post.password %> >
+      </div>
+    <input type='submit' value='다시 저장!'>
+</form>
